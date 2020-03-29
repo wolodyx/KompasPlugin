@@ -1,8 +1,8 @@
 add_library(Kompas3D INTERFACE IMPORTED GLOBAL)
 
 set(Kompas3D_SDK_Dir "c:/Program Files (x86)/ASCON/KOMPAS-3D LT V12/SDK")
-set(Kompas3D_Lib_Dir "c:/Program Files (x86)/ASCON/KOMPAS-3D LT V12/SDK/Lib")
-set(Kompas3D_TLB_Dir "c:/Program Files (x86)/ASCON/KOMPAS-3D LT V12/SDK/Lib")
+set(Kompas3D_Lib_Dir ${Kompas3D_SDK_Dir}/Lib)
+set(Kompas3D_TLB_Dir ${Kompas3D_SDK_Dir}/Lib)
 
 set(Kompas3D_TLB_Files
   ksConstants3D.tlb

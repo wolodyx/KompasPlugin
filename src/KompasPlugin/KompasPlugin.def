@@ -1,0 +1,8 @@
+LIBRARY      "KompasPlugin"
+DESCRIPTION  "KompasPlugin Windows Dynamic Link Library"
+
+EXPORTS
+  LIBRARYID    @1
+  LIBRARYENTRY @2
+  SELECTFILTERPROC   @3
+  SELECTCALLBACKPROC @4

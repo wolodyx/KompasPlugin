@@ -11,13 +11,18 @@ set(Kompas3D_TLB_Files
   kAPI3D5COM.tlb 
 )
 
-target_link_libraries(Kompas3D
-  INTERFACE
-    ${Kompas3D_Lib_Dir}/klAPI2D5.lib
-    ${Kompas3D_Lib_Dir}/klAPI3D5.lib
-    ${Kompas3D_Lib_Dir}/klAPI5.lib
-    ${Kompas3D_Lib_Dir}/klAPI7.lib
+set(Kompas3D_Lib_Files
+  klAPI2D5.lib
+  klAPI3D5.lib
+  klAPI5.lib
+  klAPI7.lib
 )
+
+foreach(lib ${Kompas3D_Lib_Files})
+  target_link_libraries(Kompas3D
+    INTERFACE ${Kompas3D_Lib_Dir}/${lib}
+)
+endforeach(lib)
 
 target_include_directories(Kompas3D
   INTERFACE
